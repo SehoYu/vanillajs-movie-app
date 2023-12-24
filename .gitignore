@@ -1,6 +1,7 @@
 .DS_Store
 .vscode
-
 .parcel-cache
 dist
 node_modules
+.vercel
+.env
