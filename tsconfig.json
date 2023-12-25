@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    // 컴파일할 ES(JS) 버전, ES2015(ES6) 권장
+    "target": "ES2015",
+    // 모듈 시스템: CommonJS, AMD, ESNext
+    "module": "ESNext",
+    // 모듈 해석 방식: Node, Classic => 경로 작성 시 ts 확장자 생략 가능하도록
+    "moduleResolution": "Node",
+    // ESM 모듈방식 호환성 활성화 여부 = esm, common.js 호환 가능하도록
+    "esModuleInterop": true,
+    // 모든 파일을 모듈로 컴파일 = import, export 키워드 필수
+    "isolatedModules": false,
+    // 모듈 해석에 사용할 기준 경로 = tsconfig.json 위치를 기준으로 src 폴더의 상대위치
+    "baseUrl": "./",
+    // 컴파일러가 참조할 타입선언(d.ts) 경로, 기본값으로 적용되어 있어서 DefinitelyTyped 바로 적용 가능
+    // "typeRoots": ["./node_modules/@types"]
+    // ts->js 컴파일 시 사용할 라이브러리
+    "lib": ["ESNext", "DOM"],
+    // 더 엄격한 타입 검색 활성화
+    "strict": true
+  },
+  // 컴파일 파일 경로
+  "include": [
+    "src/**/*.ts",
+    "api/**/*.ts"
+  ],
+  // 컴파일 시 제외할 파일 경로
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
